@@ -1,6 +1,6 @@
 // LEXIRUN's offline helper: keeps the game on the phone so it opens without internet.
 // Online, the newest game is fetched first (and kept); offline, the kept one opens.
-const CACHE = 'lexirun-20261127184048';
+const CACHE = 'lexirun-20261127202646';
 const FILES = ['./', './index.html', './manifest.webmanifest', './icons/apple-touch-icon.png', './icons/icon-192.png', './icons/icon-512.png', './icons/maskable-512.png'];
 self.addEventListener('install', (e) => {
   e.waitUntil(caches.open(CACHE).then((c) => c.addAll(FILES)).then(() => self.skipWaiting()));
